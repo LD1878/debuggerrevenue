@@ -1,0 +1,36 @@
+---
+# The empty front matter (these two sets of dashes) is MANDATORY. 
+# It tells Jekyll to compile this file into standard CSS.
+---
+
+// 1. Import the default theme's CSS so you don't lose the base styling
+@import "{{ site.theme }}";
+
+// 2. Write your custom overrides below this line.
+// Because it's SCSS, you can nest variables and classes.
+
+:root {
+  --primary-green: #238636;
+  --bg-dark: #0d1117;
+  --card-bg: rgba(255,255,255,0.05);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #c9d1d9;
+}
+
+// Your custom pricing card from earlier can go right here
+.pricing-card {
+  background: linear-gradient(145deg, #161b22, #0d1117);
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin: 50px 0;
+  
+  .price {
+    font-size: 3em;
+    color: #fff;
+  }
+}
